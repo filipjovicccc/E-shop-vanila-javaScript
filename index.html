@@ -19,21 +19,40 @@
        <div class="wrap">
            <div class="box-item" >
              <img src="img/tiger.jpg" width="80%" alt="">
+             <h4>Buy Tiger</h4>
+             <p>$10</p>
+              <button onclick="addToCart(this)" class="btn-dark">Add to cart</button>
+              <input class="input" type="number" name="quantity" value="0" min="0">
            </div>
            <div class="box-item">
               <img src="img/king.jpg" width="80%" alt="">
+              <h4>Buy Kingfisher </h4>
+             <p>$20</p>
+              <button onclick="addToCart(this)"  class="btn-dark"   >Add to cart</button>
+              <input class="input"  type="number" name="quantity" value="0" min="0">
            </div>
        </div>
        <div class="wrap">
-           <div>
-
+           <div class="box-item">
+               <img src="img/corona.jpg" width="80%" alt="">
+               <h4>Buy Corona</h4>
+            <p>$30</p>
+            <button onclick="addToCart(this)" class="btn-dark"  >Add to cart</button>
+            <input class="input"  type="number" name="quantity" value="0" min="0">
            </div>
-           <div>
-
+           <div class="box-item">
+               <img src="img/carlton.jpg" width="80%" alt="">
+               <h4>Buy Carlton</h4>
+               <p>$35 </p>
+               <button onclick="addToCart(this)" class="btn-dark"  >Add to cart</button> 
+               <input class="input"  type="number" name="quantity" value="0" min="0">  
            </div>
 
        </div>
-       <div class="wrap"></div>
+       <div class="wrap">
+           <h3>Cart:</h3>
+           <div class="cart-items"></div>
+       </div>
 
     </div>
     
