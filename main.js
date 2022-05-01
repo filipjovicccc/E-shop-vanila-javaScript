@@ -1,3 +1,4 @@
+let Total = 0;
 function addToCart(example) {
   let parentElem = example.parentElement;
 
@@ -7,11 +8,25 @@ function addToCart(example) {
 
   let amount = parentElem.querySelector("input").value;
 
-  console.log(amount);
-
   price = price.substring(1);
   price = parseInt(price);
 
+  let sum = amount * price;
+  Total += sum;
+
   let cartItems = document.querySelector(".cart-items");
-  cartItems.innerHTML += `<h3></h3>`;
+
+  if (parseInt(amount) === 0) {
+    alert("please chose amount");
+  } else {
+    cartItems.innerHTML += `<h3>${title} x${amount} $${sum}</h3>
+ `;
+    example.disabled = true;
+    let btn = document.querySelector(".btn-dark");
+
+    btn.style.backgroundColor = "grey";
+  }
+  total = document.querySelector(".total");
+
+  total.innerHTML = `<p>Total: $${Total}</p>`;
 }

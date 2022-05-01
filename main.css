@@ -30,3 +30,20 @@
 .input{
     width: 40px;
 }
+
+#wraper{
+    justify-content: space-between;
+}
+
+#button{
+    /* margin-top: 5em; */
+    width: 7em;
+    align-self: center;
+
+}
+
+#wraper p {
+    font-size: 3rem;
+   
+    
+}
