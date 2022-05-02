@@ -1,7 +1,7 @@
 let Total = 0;
+
 function addToCart(example) {
   let parentElem = example.parentElement;
-
   let title = parentElem.querySelector("h4").innerText;
 
   let price = parentElem.querySelector("p").innerText;
@@ -19,13 +19,33 @@ function addToCart(example) {
   if (parseInt(amount) === 0) {
     alert("please chose amount");
   } else {
-    cartItems.innerHTML += `<h3>${title} x${amount} $${sum}</h3>
+    cartItems.innerHTML += `<div class="single-item"><h3>${title} x${amount} $<span>${sum}</span>
+      <button onclick="removeItem(this)"
+       type="button" class="btn btn-primary">
+       Remove</button></h3></div>
  `;
+
     example.disabled = true;
     let btn = document.querySelector(".btn-dark");
 
     btn.style.backgroundColor = "grey";
   }
+  total = document.querySelector(".total");
+
+  total.innerHTML = `<p>Total: $${Total}</p>`;
+}
+
+function removeItem(example) {
+  let newParentElem = example.parentElement.parentElement;
+
+  newParentElem.style.display = "none";
+
+  let singleItem = document.querySelector(".single-item");
+
+  let sum = singleItem.querySelector("span");
+
+  Total -= sum.innerText;
+
   total = document.querySelector(".total");
 
   total.innerHTML = `<p>Total: $${Total}</p>`;

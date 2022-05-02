@@ -31,6 +31,12 @@
     width: 40px;
 }
 
+.single-item{
+
+background-color: red;
+
+
+}
 #wraper{
     justify-content: space-between;
 }
